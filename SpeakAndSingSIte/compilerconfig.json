@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/bootstrap.css",
+    "inputFile": "wwwroot/lib/bootstrap/scss/bootstrap.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/font-awesome.css",
+    "inputFile": "wwwroot/lib/font-awesome/scss/font-awesome.scss"
+  }
+]

@@ -1,0 +1,25 @@
+﻿@model TextField
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keyword = Model.MetaKeyword;
+}
+
+<div>
+    <h2>на карте</h2>
+</div>
+<div>
+    <a class="dg-widget-link" href="http://2gis.ru/novosibirsk/firm/70000001024841074/center/82.91098594665529,55.06095763722195/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Новосибирска</a>
+        <div class="dg-widget-link"><a href="http://2gis.ru/novosibirsk/firm/70000001024841074/photos/70000001024841074/center/82.91098594665529,55.06095763722195/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a>
+        </div>
+
+        <div class="dg-widget-link"><a href="http://2gis.ru/novosibirsk/center/82.913012,55.063264/zoom/16/routeTab/rsType/bus/to/82.913012,55.063264╎Speak and Sing, студия речевого развития и вокала Ксении Белоус?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Speak and Sing, студия речевого развития и вокала Ксении Белоус</a>
+        </div>
+
+        <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+        <script charset="utf-8">new DGWidgetLoader({ "width": 500, "height": 500, "borderColor": "#a3a3a3", "pos": { "lat": 55.06095763722195, "lon": 82.91098594665529, "zoom": 16 }, "opt": { "city": "novosibirsk" }, "org": [{ "id": "70000001024841074" }] });</script>
+        <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+</div>
+<div>
+    @Html.Raw(Model.Text);
+</div>

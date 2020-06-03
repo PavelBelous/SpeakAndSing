@@ -1,0 +1,26 @@
+﻿@model LoginViewModel
+
+<form class="form-signin" asp-area="" asp-controller="Account" asp-action="login" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
+    <img class="mb-4" src="~/images/Логотоп.jpeg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Введите учетные данные</h1>
+    <div asp-validation-summary="All"></div>
+
+    <label for="text" class="sr-only" asp-for="UserName">Email address</label>
+    <input asp-for="UserName" type="text" id="text" class="form-control" placeholder="Name Admin" required="" autofocus="">
+    @*<span asp-validation-for="UserName"></span>*@
+
+    <label asp-for="Password" for="inputPassword" class="sr-only">Password</label>
+    <input asp-for="Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+    @*<span asp-validation-for="Password"></span>*@
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+
+    <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
+
+</form>

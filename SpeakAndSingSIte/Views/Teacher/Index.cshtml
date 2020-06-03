@@ -1,0 +1,25 @@
+﻿@model IQueryable<Teacher>
+@{
+    TextField textField = ViewBag.TextField;
+
+    ViewBag.Title = textField.MetaTitle;
+    ViewBag.Description = textField.MetaDescription;
+    ViewBag.Keyword = textField.MetaKeyword;
+}
+    <div>
+        @if (Model.Any())
+        {
+            <ul class="big-image-list">
+                @foreach (Teacher entity in Model)
+                {
+                    <li>
+                        <a asp-area="" asp-controller="Teacher" asp-action="Index" asp-route-id="@entity.Id">
+                            <img src="~/images/@entity.ImagePath" alt="" class="left" />
+                        </a>
+                        <h4>@entity.firstName</h4>
+                        <p>@entity.lastName</p>
+                    </li>
+                }
+            </ul>
+        }
+    </div>

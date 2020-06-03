@@ -1,0 +1,21 @@
+﻿@model Teacher
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keyword = Model.MetaKeyword;
+}
+
+<div>
+    <h2>
+        @Model.Title
+    </h2>
+    <h2>
+        @Model.firstName
+    </h2>
+    <div>
+        <img class="img-block" src="~/images/@Model.ImagePath" />
+    </div>
+</div>
+<div>
+    @Html.Raw(Model.Text)
+</div>

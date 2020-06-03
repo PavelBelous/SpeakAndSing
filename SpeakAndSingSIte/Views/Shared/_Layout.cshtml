@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    @await Html.PartialAsync("MetategsPartial")
+    @await Html.PartialAsync("CssPartial")
+</head>
+<body>
+    <div class="container-fluid">
+        @await Html.PartialAsync("HeaderPartial")
+        <div>
+            <div class="tox-sidebar">
+                <div>
+                    @RenderBody()
+                </div>
+                @await Html.PartialAsync("SidebarPartial")
+            </div>
+        </div>
+        <footer>
+            @await Html.PartialAsync("FooterPartial")
+        </footer>
+    </div>
+    @await Html.PartialAsync("ScriptsPartial")
+</body>
+</html>
